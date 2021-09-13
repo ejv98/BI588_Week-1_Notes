@@ -1,0 +1,129 @@
+---
+title: "CASBI588-Week 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+<!-- First Steps in R -->
+
+<!-- Useful commands:  -->
+<!-- <- function to assign values (= function may be used to assign values as well) -->
+<!-- 1s() function to list objects you have defined in your workspace -->
+<!-- You can set various settings to customize your interactions with R -->
+<!-- -To change the standard prompt, use the function options() with the prompt argument: options(prompt="") [where you supply, between the quotes, text with what you want the prompt to say] -->
+<!-- -To list the current working directory (the default folder where dialog boxes will open and where files and output will be stored), use the function getwd(), which has no arguments -->
+<!-- -To set the current working directory, use the function setwd("") [where you supply, between the quotes, the path to the desired directory] -->
+
+<!-- Challenge 1 -->
+
+```{r}
+8+5
+[1] 13
+10-6/2
+[1]7
+(10-6)/2
+[1]2
+10*5
+[1]50
+15/5
+[1]3
+10^5
+[1]1e+05
+3*pi
+[1]9.424778
+
+# Assign the number 6 to a variable called x
+# Assign the number 5 to a variable called y
+# Assign x * y to a variable called z
+# Assign x^2 to a variable called x2
+
+x<-6
+x
+[1] 6
+
+y<-5
+y
+[1] 5
+
+z<-x*y
+z
+[1] 30
+
+x2<-x^2
+x2
+[1] 36
+
+# Assign the number 10 to a variable called x
+# Take the natural log of x using the log() function
+# Find the factorial of x using the factorial() function
+# Assign the number 81 to a variable called y
+# Take the square root of y using the sqrt() function
+# Assign the number -8.349218 to a variable called z
+# Use ?round() to view the help file for the function round()
+# Round z to the 1000ths place
+# Use ?abs() to view the help file for the function abs()
+# Take the absolute value of z * y
+
+x<-10
+x
+[1] 10
+
+log(x)
+[1] 2.302585
+
+factorial(x)
+[1] 3628800
+
+y<-81
+y
+[1] 81
+
+sqrt(y)
+[1] 9
+
+z<--8.349218
+z
+[1] -8.349218
+
+round(z,digits=3)
+[1] -8.349
+
+abs(z)
+[1] 8.349218
+
+abs(z*y)
+[1] 676.2867
+
+ls()
+[1] "x"  "x2" "y"  "z" 
+#lists all the variables defined
+
+rm(list=ls())
+> ls()
+character(0)
+#clears all the defined variables
+```
+
