@@ -27,9 +27,9 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-<!-- First Steps in R -->
+#First Steps in R
 
-<!-- Useful commands:  -->
+#Useful Commands
 <!-- <- function to assign values (= function may be used to assign values as well) -->
 <!-- 1s() function to list objects you have defined in your workspace -->
 <!-- You can set various settings to customize your interactions with R -->
@@ -37,7 +37,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 <!-- -To list the current working directory (the default folder where dialog boxes will open and where files and output will be stored), use the function getwd(), which has no arguments -->
 <!-- -To set the current working directory, use the function setwd("") [where you supply, between the quotes, the path to the desired directory] -->
 
-<!-- Challenge 1 -->
+#Challenge 1
 
 ```{r}
 8+5
@@ -127,3 +127,72 @@ character(0)
 #clears all the defined variables
 ```
 
+#Creating vectors
+
+<!-- Vectors are variables with one or more values of the same type.  -->
+
+There are lots of ways to create vectors… one of the most common is to use the c() or “concatenate” command:
+
+x<-c(15, 16, 12, 3, 21, 45, 23)
+x
+[1] 15 16 12  3 21 45 23
+
+y<-c("once","upon","a","time")
+y
+[1] "once" "upon" "a"    "time"
+
+<!-- To check the class of the variables (e.g. x, y, and z) -->
+
+class(x)
+[1] "numeric"
+class(y)
+[1] "character"
+class(z)
+Error: object 'z' not found
+
+<!-- Another way to create a vector is to use the : as a sequence operator.  -->
+
+x<-1:10
+x
+[1]  1  2  3  4  5  6  7  8  9 10
+ 
+length(x)
+[1] 10
+
+#Examples
+```{r}
+x
+ [1] 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+length(x)
+[1] 14
+y<-1:4
+y
+[1] 1 2 3 4
+
+z<-c(10,100)
+z
+[1]  10 100
+z*x
+ [1]  150 1600  170 1800  190 2000  210 2200  230 2400  250 2600
+[13]  270 2800
+```
+
+#Working with Scripts
+
+<!-- Scripts are text files that can be stored as R commands, and they can be used to link together sets of commands to perform complete analyses and show results.  -->
+
+<!-- If you save a script, you can use the source() function (with the path to the script file of interest as an argument) at the console prompt (or in another script) to read and execute the entire contents of the script file. You may also go to Code > Source to run an entire script.  -->
+
+#Example
+
+<!-- Writing a script containing a function - type in code to create the sayhi() function, which adds a name to a greeting:  -->
+
+sayhi<-function(x){hi<-paste("greetings,",x,"!",sep="")}
+hi
+ [1] "greetings,15!" "greetings,16!"
+ [3] "greetings,17!" "greetings,18!"
+ [5] "greetings,19!" "greetings,20!"
+ [7] "greetings,21!" "greetings,22!"
+ [9] "greetings,23!" "greetings,24!"
+[11] "greetings,25!" "greetings,26!"
+[13] "greetings,27!" "greetings,28!"
